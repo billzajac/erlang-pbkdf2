@@ -18,7 +18,7 @@
 -define(SHA1_OUTPUT_LENGTH, 20).
 
 %% Current scheme, much stronger.
--spec pbkdf2(binary(), binary(), integer()) -> string().
+-spec pbkdf2(binary(), binary(), integer()) -> binary().
 pbkdf2(Password, Salt, Iterations) ->
     {ok, Result} = pbkdf2(Password, Salt, Iterations, ?SHA1_OUTPUT_LENGTH),
     Result.
